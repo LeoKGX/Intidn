@@ -1,0 +1,32 @@
+<div class="card mat-card">
+  <div id="certifications">
+    <div class="card-titles">
+      <h2>Certificaciones</h2>
+      <div class="btn-edit">
+        <a href="#" class="btn-right">
+        <i class="fa fa-pen"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <ul class="items-list">
+    <li *ngFor="let cert of certificationsList">
+      <div class="data-container">
+          <div class="logo-image-container">
+            <img
+            [src]="cert.img"
+            class="logo-image">
+          </div>
+        <div class="list-info">
+          <div>
+            <h4>{{cert.title}}</h4>
+            <p><span>{{cert.company}}</span></p>
+            <h5>{{cert.isued}} - {{cert.expdate}}</h5>
+            <p>Certificate ID: <em>{{cert.id}}</em></p>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

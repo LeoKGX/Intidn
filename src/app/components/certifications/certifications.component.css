@@ -1,0 +1,15 @@
+body  {
+  background-color: rgb(255, 242, 248);
+}
+div  {
+  background-color: rgb(255, 242, 248);
+
+
+  border-color: rgb(180, 34, 102);
+}
+div ul.items-list li div.data-container{
+  border: 1px solid rgb(180, 34, 102);
+  width: fit-content;
+  border-radius: 4px;
+}
+

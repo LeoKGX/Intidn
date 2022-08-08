@@ -1,1 +1,154 @@
 /* You can add global styles to this file, and also import other style files */
+.mat-card {
+  border-radius: 32px;
+  margin: 10px 10px;
+  padding: 20px;
+  border-color: #0a66c2;
+}
+
+.mat-card#first-card {
+  padding: 0;
+}
+
+div#profile-back {
+  display: flex;
+  z-index: auto;
+}
+
+div#profile-back img {
+  width: 100%;
+  border-radius: 32px 32px 0 0;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 160px;
+  height: 155px;
+  margin-top: -110px;
+  z-index: 1;
+}
+
+div#info-actions {
+  display: flex;
+}
+
+div#info-actions button {
+  margin-right: 8px;
+}
+
+div#info-contact span {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+div#info-contact span a {
+  color: #0a66c2;
+  touch-action: manipulation;
+  text-decoration: none;
+}
+
+div#info-company {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+div#info-data {
+  display: flex;
+  justify-content: space-between;
+}
+
+div#info-data h1 {
+  font-size: 1.8rem;
+  display: inline;
+  font-weight: 500;
+  line-height: 1.25;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+div#info-data ul#info-details {
+  width: 232px;
+  list-style: none;
+  flex-shrink: 0;
+}
+
+div#info-data ul#info-details li a {
+  color: black;
+  display: flex;
+  text-decoration: none;
+}
+
+div#info-data ul#info-details li a h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  align-self: center;
+  vertical-align: baseline;
+}
+
+div#info-data ul#info-details li a img {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+}
+
+ul.items-list {
+  list-style: none inside;
+}
+
+ul.items-list li {
+  display: flex;
+  margin: 10px 0;
+}
+
+ul.items-list li div.data-container {
+  flex-grow: 1;
+  border-color: #0a66c2;
+
+}
+
+ul.items-list li div.data-container a {
+  color: black;
+  width: fit-content;
+  margin: 0px 0px 0px 0px;
+}
+.fa:hover {
+  background-color: grey;
+  border-radius: 50%;
+}
+
+div.logo-image-container img {
+  height: 100px;
+  width: 100px;
+  border-radius: 32px 32px 32px 32px;
+  margin: 0px;
+  padding-left: 0%;
+}
+
+div.card-titles h2 {
+  width: fit-content;
+  margin-right: auto;
+}
+
+i.fa {
+  width: fit-content;
+  margin-inline-end: auto;
+  padding-right: 0%;
+  position: relative;
+  left: 98%;
+  bottom: 45px;
+}
+
+div#login-head{
+  width: 100%;
+  height: 50px;
+  background-color: black;
+}
+
+div#login-head button#log-button{
+  width: fit-content;
+  background-color: aliceblue;
+  position: relative;
+  left: 92%;
+  top: 10px;
+}

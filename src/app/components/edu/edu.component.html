@@ -1,0 +1,33 @@
+<div class="card mat-card">
+  <div id="educacion">
+    <div class="card-titles">
+      <h2>Educación</h2>
+      <div class="btn-edit">
+        <a href="#" class="btn-right">
+        <i class="fa fa-pen"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <ul class="items-list">
+    <li *ngFor="let edu of educacionList">
+      <div class="data-container">
+        <a [href]="edu.page">
+          <div class="logo-image-container">
+            <img
+            [src]="edu.img"
+            class="logo-image">
+          </div>
+        </a>
+        <div class="list-info">
+          <div>
+            <h3>{{edu.school}}</h3>
+            <p><span>{{edu.title}}</span></p>
+            <h4>{{edu.start}} - {{edu.end}}</h4>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

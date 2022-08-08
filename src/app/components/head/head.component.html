@@ -1,0 +1,35 @@
+<div class="card mat-card" id="first-card">
+  <div id="profile-back"><img src="https://wallpapercave.com/wp/wp3121914.jpg">
+  </div>
+  <div id="info" style="padding: 16px;">
+    <div id="info-img">
+            <img class="profile-image" [src]="miPort.profileimg" alt="Profile picture">
+                    <div class="btn-edit"><a href="#" class="btn-right"><i class="fa fa-pen"></i></a></div>
+    </div>
+    <div id="info-data">
+      <div>
+        <h1>{{miPort.name}}</h1>
+        <div id="info-company">
+          {{miPort.ocupation}}
+        </div>
+        <div id="info-contact">
+          <span>{{miPort.location}}</span>
+          <br>
+        </div>
+      </div>
+      <ul id="info-details">
+        <li>
+          <a [href]="miPort.linkuns">
+          <img [src]="miPort.logouns" alt="Logo UNS">
+          <h2>{{miPort.nameuns}}</h2>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <br>
+    <div id="info-actions">
+      <button type="button" class="btn btn-primary">Añadir seccion</button>
+      <button type="button" class="btn btn-primary">Información de contacto</button>
+    </div>
+  </div>
+</div>
