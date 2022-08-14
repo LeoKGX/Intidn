@@ -1,0 +1,16 @@
+h1{
+  margin-top: 40px;
+  margin-left: 39%;
+}
+
+div#login-div{
+  justify-content: space-between;
+  width: 100%;
+  height: fit-content;
+}
+
+form.login-form{
+  width: fit-content;
+  margin-left: 40%;
+  margin-top: 80px;
+}

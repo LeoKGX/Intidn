@@ -1,3 +1,42 @@
-<div id="login-head">
-  <button id="log-button" onclick="">Login</button>
+<h1>Iniciar Sesión</h1>
+<div id="login-div">
+  <form [formGroup]="form" class="login-form" (ngSubmit)="onEnviar($event)" >
+    <div class="form-group mb-3">
+      <label for="Email">Email</label>
+      <input
+      type="email"
+      class="form-control"
+      id="Email"
+      formControlName="email"
+      [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid' : !Email?.errors && Email?.touched}"
+      >
+      <div *ngIf="Email?.errors && Email?.touched">
+        <p *ngIf="Email?.hasError('required')" class="text-danger">
+          El email es requerido
+        </p>
+        <p *ngIf="Email?.hasError('email')" class="text-danger">
+          Ingrese un email valido
+        </p>
+      </div>
+    </div>
+    <div class="form-group mb-3">
+      <label for="Password">Contraseña</label>
+      <input
+      type="password"
+      class="form-control"
+      id="Password"
+      formControlName="pass"
+      [ngClass]="{'is-invalid': Pass?.errors && Pass?.touched, 'is-valid' : !Pass?.errors && Pass?.touched}"
+      >
+      <div *ngIf="Pass?.errors && Pass?.touched">
+        <p *ngIf="Pass?.hasError('required')" class="text-danger">
+          La contraseña es requerida
+        </p>
+        <p *ngIf="Pass?.hasError('minlength')" class="text-danger">
+          la contraseña debe ser de 8 o más caracteres
+        </p>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
 </div>

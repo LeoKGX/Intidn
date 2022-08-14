@@ -14,7 +14,7 @@ export class HeadComponent implements OnInit {
 
   ngOnInit(): void {
     this.datosPorf.obtenerDatos().subscribe(data => {
-      this.miPort = (data);
+      this.miPort = (data[0]);
     });
 
   }

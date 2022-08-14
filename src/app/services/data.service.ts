@@ -7,9 +7,11 @@ import { Observable } from "rxjs";
 })
 export class DataService {
 
+  url:string = "http://localhost:8080/persona";
+
   constructor(private http:HttpClient) { }
 
   obtenerDatos():Observable<any>{
-    return this.http.get("./assets/prueba/datos.json");
+    return this.http.get(this.url);
   }
 }
