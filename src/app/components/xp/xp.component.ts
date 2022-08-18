@@ -10,13 +10,16 @@ export class XpComponent implements OnInit {
 
   constructor(private datosPorf:DataService) { }
 
-  proyectosList:any;
+  proyectosList:any ;
+  techList:any;
 
   ngOnInit(): void {
-    this.datosPorf.obtenerDatos().subscribe(data => {
-      this.proyectosList = data.proyectos;
+    this.datosPorf.obtenerDatosProyectos().subscribe(data => {
+      this.proyectosList = data;
     });
 
+
   }
+
 
 }

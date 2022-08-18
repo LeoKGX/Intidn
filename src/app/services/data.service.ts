@@ -7,11 +7,34 @@ import { Observable } from "rxjs";
 })
 export class DataService {
 
-  url:string = "http://localhost:8080/persona";
+  urlpersona:string = "http://localhost:8080/persona";
+  urlcertificados:string = "http://localhost:8080/certificados";
+  urleducacion:string = "http://localhost:8080/educacion";
+  urlskills:string = "http://localhost:8080/skill";
+  urlproyectos:string = "http://localhost:8080/proyectos";
+
 
   constructor(private http:HttpClient) { }
 
-  obtenerDatos():Observable<any>{
-    return this.http.get(this.url);
+  obtenerDatosPersona():Observable<any>{
+    return this.http.get(this.urlpersona);
   }
+
+  obtenerDatosCertificados():Observable<any>{
+    return this.http.get(this.urlcertificados);
+  }
+
+  obtenerDatosEducacion():Observable<any>{
+    return this.http.get(this.urleducacion);
+  }
+
+  obtenerDatosSkills():Observable<any>{
+    return this.http.get(this.urlskills);
+  }
+
+  obtenerDatosProyectos():Observable<any>{
+    return this.http.get(this.urlproyectos);
+  }
+
+
 }

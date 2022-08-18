@@ -13,8 +13,8 @@ export class EduComponent implements OnInit {
   educacionList:any;
 
   ngOnInit(): void {
-    this.datosPorf.obtenerDatos().subscribe(data => {
-      this.educacionList = data.educacion;
+    this.datosPorf.obtenerDatosEducacion().subscribe(data => {
+      this.educacionList = data;
     });
 
   }

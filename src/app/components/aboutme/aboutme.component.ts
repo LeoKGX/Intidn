@@ -13,7 +13,7 @@ export class AboutmeComponent implements OnInit {
   miPort:any;
 
   ngOnInit(): void {
-    this.datosPorf.obtenerDatos().subscribe(data => {
+    this.datosPorf.obtenerDatosPersona().subscribe(data => {
       this.miPort = (data[0]);
     });
 

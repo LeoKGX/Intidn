@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   providedIn: "root"
 })
 export class UsersService {
-  //url = "localhost:8080/api/auth/login";
+
   url : string = "http://localhost:8080/login";
   currentUserSubject : BehaviorSubject<any>;
 
@@ -15,7 +15,7 @@ export class UsersService {
   constructor(private http: HttpClient, private ruta: Router) {
     console.log("el auth serv esta corriendo");
     this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser') || '{}'));
-
+    if ( this.usuarioAutenticado){this.ruta.navigate(['/portfolio']);}
   }
 
   iniciarSesion(credenciales : any): Observable<any>

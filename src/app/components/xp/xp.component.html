@@ -8,10 +8,11 @@
       <div class="data-container">
         <div class="list-info">
           <h4>{{xp.name}}</h4>
+          <h2>{{xp.description}}</h2>
         </div>
       </div>
-      <p *ngFor="let xp2 of xp.tech">
-        {{xp2.tech}}-
+      <p *ngFor="let xp2 of xp.techs">
+        {{xp2.name}}-
       </p>
     </li>
   </ul>

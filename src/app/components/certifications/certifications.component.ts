@@ -13,8 +13,8 @@ export class CertificationsComponent implements OnInit {
   certificationsList:any;
 
   ngOnInit(): void {
-    this.datosPorf.obtenerDatos().subscribe(data => {
-      this.certificationsList = data.certifications;
+    this.datosPorf.obtenerDatosCertificados().subscribe(data => {
+      this.certificationsList = data;
     });
 
   }

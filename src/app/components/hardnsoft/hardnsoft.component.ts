@@ -13,8 +13,8 @@ export class HardnsoftComponent implements OnInit {
   hardnsoftList:any;
 
   ngOnInit(): void {
-    this.datosPorf.obtenerDatos().subscribe(data => {
-      this.hardnsoftList = data.hardnsoft;
+    this.datosPorf.obtenerDatosSkills().subscribe(data => {
+      this.hardnsoftList = data;
     });
 
   }
