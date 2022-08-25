@@ -17,6 +17,13 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { UsersService } from './services/login.service';
 import { InterceptorService } from './services/interceptor.service';
 import { DataService } from './services/data.service';
+import { EditarFotoPerfilComponent } from './components/editar/editar-foto-perfil/editar-foto-perfil.component';
+import { EducationComponent } from './components/agregar/education/education.component';
+import { CertificadosComponent } from './components/agregar/certificados/certificados.component';
+import { HnsskillsComponent } from './components/agregar/hnsskills/hnsskills.component';
+import { XperienceComponent } from './components/agregar/xperience/xperience.component';
+import { EditarAboutmeComponent } from './components/editar/editar-aboutme/editar-aboutme.component';
+import { BorrarhnsComponent } from './components/borrar/borrarhns/borrarhns.component';
 
 
 @NgModule({
@@ -29,7 +36,14 @@ import { DataService } from './services/data.service';
     HardnsoftComponent,
     CertificationsComponent,
     LoginComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    EditarFotoPerfilComponent,
+    EducationComponent,
+    CertificadosComponent,
+    HnsskillsComponent,
+    XperienceComponent,
+    EditarAboutmeComponent,
+    BorrarhnsComponent
   ],
   imports: [
     BrowserModule,

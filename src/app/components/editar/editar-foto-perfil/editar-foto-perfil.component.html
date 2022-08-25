@@ -1,0 +1,34 @@
+<form [formGroup]="formEditar" class="login-form" (ngSubmit)="onSend($event)" >
+  <div class="form-group mb-3">
+    <label for="mail">Email</label>
+    <input
+    class="form-control"
+    formControlName="mail"
+    id="mail"
+    [ngClass]="{'is-invalid': Mail?.errors && Mail?.touched, 'is-valid' : !Mail?.errors && Mail?.touched}"
+    >
+    <div *ngIf="Mail?.errors && Mail?.touched">
+      <p *ngIf="Mail?.hasError('required')" class="text-danger">
+        El email es requerido
+      </p>
+      <p *ngIf="Mail?.hasError('email')" class="text-danger">
+        Ingrese un email valido
+      </p>
+    </div>
+  </div>
+  <div class="form-group mb-3">
+    <label for="imglink">Nuevo Link de la Foto de perfil</label>
+    <input
+    class="form-control"
+    id="imglink"
+    formControlName="imglink"
+    [ngClass]="{'is-invalid': Imglink?.errors && Imglink?.touched, 'is-valid' : !Imglink?.errors && Imglink?.touched}"
+    >
+    <div *ngIf="Imglink?.errors && Imglink?.touched">
+      <p *ngIf="Imglink?.hasError('required')" class="text-danger">
+        Ingrese un link para actualizar la foto de perfil
+      </p>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>

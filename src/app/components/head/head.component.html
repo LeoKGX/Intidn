@@ -3,8 +3,13 @@
   </div>
   <div id="info" style="padding: 16px;">
     <div id="info-img">
-            <img class="profile-image" [src]="miPort.profile_img" alt="Profile picture">
-                    <div class="btn-edit"><a href="#" class="btn-right"><i class="fa fa-pen"></i></a></div>
+      <img class="profile-image" [src]="miPort.profile_img" alt="Profile picture">
+        <div class="btn-edit" (click)="mostrarEditarFotoPerfil = !mostrarEditarFotoPerfil">
+          <i class="fa fa-pen"></i>
+        </div>
+    </div>
+    <div class="card mat-card" *ngIf="mostrarEditarFotoPerfil">
+      <app-editar-foto-perfil></app-editar-foto-perfil>
     </div>
     <div id="info-data">
       <div>
@@ -20,8 +25,11 @@
     </div>
     <br>
     <div id="info-actions">
-      <button type="button" class="btn btn-primary">Añadir seccion</button>
-      <button type="button" class="btn btn-primary">Información de contacto</button>
+      <button type="button" class="btn btn-primary" (click)="mostrarDatos = !mostrarDatos">Información de contacto</button>
     </div>
   </div>
+</div>
+<div class="card mat-card" *ngIf="mostrarDatos">
+  <h2>Email: {{miPort.mail}}</h2>
+  <h2>Telefono: {{miPort.phone}}</h2>
 </div>

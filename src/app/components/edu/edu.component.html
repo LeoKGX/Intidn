@@ -2,22 +2,23 @@
   <div id="educacion">
     <div class="card-titles">
       <h2>Educación</h2>
-      <div class="btn-edit">
-        <a href="#" class="btn-right">
-        <i class="fa fa-pen"></i>
-        </a>
+      <div class="btn-edit" (click)="mostrarAniadirEdu = !mostrarAniadirEdu">
+        <i class="fa fa-plus"></i>
+      </div>
+      <div class="card mat-card" *ngIf="mostrarAniadirEdu">
+        <app-education></app-education>
       </div>
     </div>
   </div>
 
   <ul class="items-list">
     <li *ngFor="let edu of educacionList">
-      <div class="data-container">
+      <div class="m-3 data-container">
         <a [href]="edu.page">
           <div class="logo-image-container">
             <img
             [src]="edu.img"
-            class="logo-image">
+            class="m-3 logo-image">
           </div>
         </a>
         <div class="list-info">

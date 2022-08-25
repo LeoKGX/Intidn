@@ -5,16 +5,21 @@ div  {
   background-color: rgb(255, 242, 248);
 
 
-  border-color: rgb(180, 34, 102);
+  border-color: rgb(221, 61, 136);
 }
-div ul.items-list li div.data-container{
-  border: 1px solid rgb(180, 34, 102);
+div.m-3.data-container{
+  border: 1px ;
+  border-radius: 1%;
   width: fit-content;
-  box-shadow: 1px 1px 0px rgb(133, 131, 129),
-  2px 2px 1px rgb(133, 131, 129),
-  3px 3px 1px rgb(133, 131, 129),
-  4px 4px 1px rgb(133, 131, 129),
-  5px 5px 1px rgb(133, 131, 129),
+  display: inline-flex;
+  box-shadow: 2px 2px 20px 10px rgb(189, 190, 190);
+
 
 }
+  div.list-info {
+    border-radius: 5%;
+  }
 
+ul{
+  list-style: none;
+}

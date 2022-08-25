@@ -4,10 +4,33 @@ body  {
 div  {
   background-color: rgb(255, 242, 248);
 
-  border-color: rgb(180, 34, 102);
+
+  border-color: rgb(221, 61, 136);
 }
-div ul.items-list li div.data-container{
-  border: 1px solid rgb(180, 34, 102);
-  width: fit-content;
-  border-radius: 4px;
+div.m-3.data-container{
+  border: 1px ;
+  border-radius: 1%;
+  width: 710px;
+  display:inline-flex;
+  box-shadow: 2px 2px 20px 10px rgb(189, 190, 190);
+
+}
+  div.list-info {
+    border-radius: 5%;
+
+  }
+
+ul{
+  list-style: none;
+
+}
+
+ul.items-list li {
+  display: flex;
+  margin: 10px 0;
+  justify-content: center;
+}
+
+ul.items-list li div.data-container {
+  flex-grow: 0.1;
 }

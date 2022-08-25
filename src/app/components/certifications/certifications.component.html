@@ -2,27 +2,28 @@
   <div id="certifications">
     <div class="card-titles">
       <h2>Certificaciones</h2>
-      <div class="btn-edit">
-        <a href="#" class="btn-right">
-        <i class="fa fa-pen"></i>
-        </a>
+      <div class="btn-edit" (click)="mostrarAniadirCert = !mostrarAniadirCert">
+        <i class="fa fa-plus"></i>
+      </div>
+      <div class="card mat-card" *ngIf="mostrarAniadirCert">
+        <app-certificados></app-certificados>
       </div>
     </div>
   </div>
 
-  <ul class="items-list">
+  <ul class="mitems-list">
     <li *ngFor="let cert of certificationsList">
-      <div class="data-container">
-          <div class="logo-image-container">
+      <div class="m-3 data-container">
+          <div class="m-2 logo-image-container">
             <img
             [src]="cert.img"
-            class="logo-image">
+            class="m-3 logo-image">
           </div>
-        <div class="list-info">
+        <div class="m-3 list-info">
           <div>
             <h4>{{cert.title}}</h4>
             <p><span>{{cert.company}}</span></p>
-            <h5>{{cert.isued}} - {{cert.expdate}}</h5>
+            <h5>{{cert.issued}} - {{cert.expdate}}</h5>
             <p>Certificate ID: <em>{{cert.certid}}</em></p>
           </div>
         </div>

@@ -9,8 +9,10 @@ import { DataService } from 'src/app/services/data.service';
 export class HardnsoftComponent implements OnInit {
 
   constructor(private datosPorf:DataService) { }
-
+  mostrarAniadirHNS = false;
   hardnsoftList:any;
+  mostrarBorrar= false;
+
 
   ngOnInit(): void {
     this.datosPorf.obtenerDatosSkills().subscribe(data => {

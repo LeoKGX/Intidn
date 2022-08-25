@@ -1,0 +1,87 @@
+<form [formGroup]="formEditar" class="login-form" (ngSubmit)="onSend($event)" >
+  <div class="form-group mb-3">
+    <label for="school">Nombre de la Escuela o Institucion</label>
+    <input
+    class="form-control"
+    formControlName="school"
+    id="school"
+    [ngClass]="{'is-invalid': School?.errors && School?.touched, 'is-valid' : !School?.errors && School?.touched}"
+    >
+    <div *ngIf="School?.errors && School?.touched">
+      <p *ngIf="School?.hasError('required')" class="text-danger">
+        El Nombre de la institucion es requerido
+      </p>
+    </div>
+  </div>
+  <div class="form-group mb-3">
+    <label for="title">Ingrese el titulo de la carrera</label>
+    <input
+    class="form-control"
+    id="title"
+    formControlName="title"
+    [ngClass]="{'is-invalid': Title?.errors && Title?.touched, 'is-valid' : !Title?.errors && Title?.touched}"
+    >
+    <div *ngIf="Title?.errors && Title?.touched">
+      <p *ngIf="Title?.hasError('required')" class="text-danger">
+        Ingrese el titulo de la carrera
+      </p>
+    </div>
+  </div>
+  <div class="form-group mb-3">
+    <label for="page">Ingrese la pagina del Instituto</label>
+    <input
+    class="form-control"
+    id="page"
+    formControlName="page"
+    [ngClass]="{'is-invalid': Page?.errors && Page?.touched, 'is-valid' : !Page?.errors && Page?.touched}"
+    >
+    <div *ngIf="Page?.errors && Page?.touched">
+      <p *ngIf="Page?.hasError('required')" class="text-danger">
+        Ingrese la pagina del Instituto
+      </p>
+    </div>
+  </div>
+  <div class="form-group mb-3">
+    <label for="img">Ingrese el link al logo del Instituto </label>
+    <input
+    class="form-control"
+    id="img"
+    formControlName="img"
+    [ngClass]="{'is-invalid': Img?.errors && Img?.touched, 'is-valid' : !Img?.errors && Img?.touched}"
+    >
+    <div *ngIf="Img?.errors && Img?.touched">
+      <p *ngIf="Img?.hasError('required')" class="text-danger">
+        Ingrese un link al logo del Instituto
+      </p>
+    </div>
+  </div>
+  <div class="form-group mb-3">
+    <label for="fecha_inicio">Ingrese el año del comienzo de la carrera</label>
+    <input
+    class="form-control"
+    id="fecha_inicio"
+    formControlName="fecha_inicio"
+    [ngClass]="{'is-invalid': Fecha_inicio?.errors && Fecha_inicio?.touched, 'is-valid' : !Fecha_inicio?.errors && Fecha_inicio?.touched}"
+    >
+    <div *ngIf="Fecha_inicio?.errors && Fecha_inicio?.touched">
+      <p *ngIf="Fecha_inicio?.hasError('required')" class="text-danger">
+        Ingrese un año de inicio de la carrera
+      </p>
+    </div>
+  </div>
+  <div class="form-group mb-3">
+    <label for="fecha_fin">Ingrese el año de finalizacion de la carrera</label>
+    <input
+    class="form-control"
+    id="fecha_fin"
+    formControlName="fecha_fin"
+    [ngClass]="{'is-invalid': Fecha_fin?.errors && Fecha_fin?.touched, 'is-valid' : !Fecha_fin?.errors && Fecha_fin?.touched}"
+    >
+    <div *ngIf="Fecha_fin?.errors && Fecha_fin?.touched">
+      <p *ngIf="Fecha_fin?.hasError('required')" class="text-danger">
+        Ingrese el año de finalizacion de la carrera (Puede ser aproximado)
+      </p>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>

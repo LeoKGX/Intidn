@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class UsersService {
 
-  url : string = "http://localhost:8080/login";
+  url : string = "https://app-portfolio-lkg.herokuapp.com/login";
   currentUserSubject : BehaviorSubject<any>;
 
 

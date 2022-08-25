@@ -11,6 +11,7 @@ export class AboutmeComponent implements OnInit {
   constructor(private datosPorf:DataService) { }
 
   miPort:any;
+  mostrarEditarAboutMe = false;
 
   ngOnInit(): void {
     this.datosPorf.obtenerDatosPersona().subscribe(data => {

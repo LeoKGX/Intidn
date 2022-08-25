@@ -16,3 +16,9 @@ i.fa {
   left: 154px;
   bottom: 34px;
 }
+div.card.mat-card{
+  z-index: 999;
+  border-radius: 5px 5px;
+  padding: 10px;
+  margin: 5px;
+}

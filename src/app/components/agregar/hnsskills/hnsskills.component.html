@@ -1,0 +1,32 @@
+<form [formGroup]="formEditar" class="login-form" (ngSubmit)="onSend($event)" >
+  <div class="form-group mb-3">
+    <label for="skill">Ingrese la habilidad Dura o Blanda a guardar </label>
+    <input
+    class="form-control"
+    id="skill"
+    formControlName="skill"
+    [ngClass]="{'is-invalid': Skill?.errors && Skill?.touched, 'is-valid' : !Skill?.errors && Skill?.touched}"
+    >
+    <div *ngIf="Skill?.errors && Skill?.touched">
+      <p *ngIf="Skill?.hasError('required')" class="text-danger">
+        Ingrese la habilidad
+      </p>
+    </div>
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="porc">Ingrese el porcentaje asociado a esa habilidad </label>
+    <input
+    class="form-control"
+    id="porc"
+    formControlName="porc"
+    [ngClass]="{'is-invalid': Porc?.errors && Porc?.touched, 'is-valid' : !Porc?.errors && Porc?.touched}"
+    >
+    <div *ngIf="Porc?.errors && Porc?.touched">
+      <p *ngIf="Porc?.hasError('required')" class="text-danger">
+        Ingrese un porcentaje
+      </p>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>

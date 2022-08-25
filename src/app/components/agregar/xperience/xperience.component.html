@@ -1,0 +1,46 @@
+<form [formGroup]="formEditar" class="login-form" (ngSubmit)="onSend($event)" >
+  <div class="form-group mb-3">
+    <label for="name">Ingrese el nombre del proyecto </label>
+    <input
+    class="form-control"
+    id="name"
+    formControlName="name"
+    [ngClass]="{'is-invalid': Name?.errors && Name?.touched, 'is-valid' : !Name?.errors && Name?.touched}"
+    >
+    <div *ngIf="Name?.errors && Name?.touched">
+      <p *ngIf="Name?.hasError('required')" class="text-danger">
+        Ingrese el nombre
+      </p>
+    </div>
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="description">Ingrese una breve descripcion del proyecto </label>
+    <input
+    class="form-control"
+    id="description"
+    formControlName="description"
+    [ngClass]="{'is-invalid': Description?.errors && Description?.touched, 'is-valid' : !Description?.errors && Description?.touched}"
+    >
+    <div *ngIf="Description?.errors && Description?.touched">
+      <p *ngIf="Description?.hasError('required')" class="text-danger">
+        Ingrese una descripcion
+      </p>
+    </div>
+  </div>
+  <div class="form-group mb-3">
+    <label for="tech">Ingrese las tecnologias del proyecto </label>
+    <input
+    class="form-control"
+    id="tech"
+    formControlName="tech"
+    [ngClass]="{'is-invalid': Tech?.errors && Tech?.touched, 'is-valid' : !Tech?.errors && Tech?.touched}"
+    >
+    <div *ngIf="Tech?.errors && Tech?.touched">
+      <p *ngIf="Tech?.hasError('required')" class="text-danger">
+        Ingrese una tecnologia
+      </p>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>

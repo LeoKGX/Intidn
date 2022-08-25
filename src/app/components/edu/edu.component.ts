@@ -11,6 +11,7 @@ export class EduComponent implements OnInit {
   constructor(private datosPorf:DataService) { }
 
   educacionList:any;
+  mostrarAniadirEdu = false;
 
   ngOnInit(): void {
     this.datosPorf.obtenerDatosEducacion().subscribe(data => {

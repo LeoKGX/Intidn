@@ -1,0 +1,18 @@
+<form [formGroup]="formBorrar" class="login-form" (ngSubmit)="onSend($event)" >
+  <div class="form-group mb-3">
+    <label for="skill">Ingrese la habilidad Dura o Blanda a borrar </label>
+    <input
+    class="form-control"
+    id="skill"
+    formControlName="skill"
+    [ngClass]="{'is-invalid': Skill?.errors && Skill?.touched, 'is-valid' : !Skill?.errors && Skill?.touched}"
+    >
+    <div *ngIf="Skill?.errors && Skill?.touched">
+      <p *ngIf="Skill?.hasError('required')" class="text-danger">
+        Ingrese la habilidad a eliminar
+      </p>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>

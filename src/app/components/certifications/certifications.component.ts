@@ -10,6 +10,7 @@ export class CertificationsComponent implements OnInit {
 
   constructor(private datosPorf:DataService) { }
 
+  mostrarAniadirCert = false;
   certificationsList:any;
 
   ngOnInit(): void {

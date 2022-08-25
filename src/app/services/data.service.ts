@@ -7,11 +7,11 @@ import { Observable } from "rxjs";
 })
 export class DataService {
 
-  urlpersona:string = "http://localhost:8080/persona";
-  urlcertificados:string = "http://localhost:8080/certificados";
-  urleducacion:string = "http://localhost:8080/educacion";
-  urlskills:string = "http://localhost:8080/skill";
-  urlproyectos:string = "http://localhost:8080/proyectos";
+  urlpersona:string = "https://app-portfolio-lkg.herokuapp.com/persona";
+  urlcertificados:string = "https://app-portfolio-lkg.herokuapp.com/certificados";
+  urleducacion:string = "https://app-portfolio-lkg.herokuapp.com/educacion";
+  urlskills:string = "https://app-portfolio-lkg.herokuapp.com/skill";
+  urlproyectos:string = "https://app-portfolio-lkg.herokuapp.com/proyectos";
 
 
   constructor(private http:HttpClient) { }

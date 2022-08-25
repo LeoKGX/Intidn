@@ -1,0 +1,89 @@
+<form [formGroup]="formEditar" class="login-form" (ngSubmit)="onSend($event)" >
+  <div class="form-group mb-3">
+    <label for="title">Titulo del curso o certificado</label>
+    <input
+    class="form-control"
+    formControlName="title"
+    id="title"
+    [ngClass]="{'is-invalid': Title?.errors && Title?.touched, 'is-valid' : !Title?.errors && Title?.touched}"
+    >
+    <div *ngIf="Title?.errors && Title?.touched">
+      <p *ngIf="Title?.hasError('required')" class="text-danger">
+        El Nombre del curso es requerido
+      </p>
+    </div>
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="company">Ingrese la institucion que otorga el titulo</label>
+    <input
+    class="form-control"
+    id="company"
+    formControlName="company"
+    [ngClass]="{'is-invalid': Company?.errors && Company?.touched, 'is-valid' : !Company?.errors && Company?.touched}"
+    >
+    <div *ngIf="Company?.errors && Company?.touched">
+      <p *ngIf="Company?.hasError('required')" class="text-danger">
+        Ingrese la Institucion que otorga curso
+      </p>
+    </div>
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="issued">Ingrese el año en el que fue completado el curso </label>
+    <input
+    class="form-control"
+    id="issued"
+    formControlName="issued"
+    [ngClass]="{'is-invalid': Issued?.errors && Issued?.touched, 'is-valid' : !Issued?.errors && Issued?.touched}"
+    >
+    <div *ngIf="Issued?.errors && Issued?.touched">
+      <p *ngIf="Issued?.hasError('required')" class="text-danger">
+        Ingrese un año
+      </p>
+    </div>
+  </div>
+  <div class="form-group mb-3">
+    <label for="expdate">Ingrese el año de expiracion del curso </label>
+    <input
+    class="form-control"
+    id="expdate"
+    formControlName="expdate"
+    [ngClass]="{'is-invalid': Expdate?.errors && Expdate?.touched, 'is-valid' : !Expdate?.errors && Expdate?.touched}"
+    >
+    <div *ngIf="Expdate?.errors && Expdate?.touched">
+      <p *ngIf="Expdate?.hasError('required')" class="text-danger">
+        Ingrese el año de expiracion del curso
+      </p>
+    </div>
+  </div>
+  <div class="form-group mb-3">
+    <label for="certid">Ingrese el ID del certificado </label>
+    <input
+    class="form-control"
+    id="certid"
+    formControlName="certid"
+    [ngClass]="{'is-invalid': Certid?.errors && Certid?.touched, 'is-valid' : !Certid?.errors && Certid?.touched}"
+    >
+    <div *ngIf="Certid?.errors && Certid?.touched">
+      <p *ngIf="Certid?.hasError('required')" class="text-danger">
+        Ingrese el Id
+      </p>
+    </div>
+  </div>
+  <div class="form-group mb-3">
+    <label for="img">Ingrese el link al logo del Instituto </label>
+    <input
+    class="form-control"
+    id="img"
+    formControlName="img"
+    [ngClass]="{'is-invalid': Img?.errors && Img?.touched, 'is-valid' : !Img?.errors && Img?.touched}"
+    >
+    <div *ngIf="Img?.errors && Img?.touched">
+      <p *ngIf="Img?.hasError('required')" class="text-danger">
+        Ingrese un link al logo del Instituto
+      </p>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>

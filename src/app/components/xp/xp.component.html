@@ -1,14 +1,19 @@
 <div class="card mat-card">
   <div class="card-titles">
     <h2>Experiencia</h2>
-    <div class="btn-edit"><a href="#" class="btn-right"><i class="fa fa-pen"></i></a></div>
-  </div>
+  <!--  <div class="btn-edit" (click)="mostrarAniadirXp = !mostrarAniadirXp">
+      <i class="fa fa-plus"></i>
+    </div>
+    <div class="card mat-card" *ngIf="mostrarAniadirXp">
+      <app-xperience></app-xperience>
+    </div>
+  </div> -->
   <ul class="items-list">
     <li *ngFor="let xp of proyectosList">
-      <div class="data-container">
+      <div class="m-3 data-container">
         <div class="list-info">
-          <h4>{{xp.name}}</h4>
-          <h2>{{xp.description}}</h2>
+          <h3>{{xp.name}}</h3>
+          <h4>{{xp.description}}</h4>
         </div>
       </div>
       <p *ngFor="let xp2 of xp.techs">
