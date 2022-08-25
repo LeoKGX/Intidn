@@ -35,7 +35,6 @@ export class BorrarhnsComponent implements OnInit {
     event.preventDefault;
     console.log(this.formBorrar.value);
     this.borrarService.borrarHNS(this.formBorrar.value ).subscribe(()=> {
-
       window.location.reload();
     });
   }
