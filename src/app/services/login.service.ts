@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { map, Observable, BehaviorSubject } from "rxjs";
+import { map, Observable, BehaviorSubject, throwError, catchError } from "rxjs";
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -26,11 +26,15 @@ export class UsersService {
       this.currentUserSubject.next(data);
       this.ruta.navigate(['/portfolio']);
       return data;
-    }))
+    }
+    ))
   }
 
   get usuarioAutenticado(){
       return this.currentUserSubject.value;
   }
 
+  logout() {
+    sessionStorage.removeItem('currentUser');
+  }
 }

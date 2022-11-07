@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.ruta.routeReuseStrategy.shouldReuseRoute = () => { return false; };
   }
 
   get Email(){
@@ -40,8 +41,12 @@ export class LoginComponent implements OnInit {
       console.log("data: " + JSON.stringify(data));
 
       this.ruta.navigate(['/portfolio']);
-    })
+    },
+    () =>
+      {
+        this.ruta.navigate(['/login']);
+      }
+    )
   }
-
 }
 
