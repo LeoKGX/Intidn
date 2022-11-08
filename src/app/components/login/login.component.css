@@ -14,3 +14,9 @@ form.login-form{
   margin-left: 40%;
   margin-top: 80px;
 }
+
+div p {
+  width: fit-content;
+  margin-top: 40px;
+  margin-left: 39%;
+}

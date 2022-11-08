@@ -10,7 +10,7 @@ export class UsersService {
 
   url : string = "https://app-portfolio-lkg.herokuapp.com/login";
   currentUserSubject : BehaviorSubject<any>;
-
+  error = false;
 
   constructor(private http: HttpClient, private ruta: Router) {
     console.log("el auth serv esta corriendo");
@@ -37,4 +37,5 @@ export class UsersService {
   logout() {
     sessionStorage.removeItem('currentUser');
   }
+
 }

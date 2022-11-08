@@ -40,3 +40,6 @@
     <button type="submit" class="btn btn-primary">Enviar</button>
   </form>
 </div>
+<div *ngIf="error">
+  <p class="text-danger">Parece que el usuario o la contraseña son incorrectos, intente nuevamente</p>
+</div>

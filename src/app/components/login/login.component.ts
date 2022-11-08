@@ -8,8 +8,10 @@ import { UsersService } from 'src/app/services/login.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
   form: FormGroup;
+  error: boolean = this.loginservice.error ;
   constructor(private formbuilder: FormBuilder, private loginservice: UsersService, private ruta: Router) {
     this.form = this.formbuilder.group(
       {
@@ -39,11 +41,12 @@ export class LoginComponent implements OnInit {
     event.preventDefault;
     this.loginservice.iniciarSesion(this.form.value).subscribe(data=> {
       console.log("data: " + JSON.stringify(data));
-
+      this.loginservice.error = false;
       this.ruta.navigate(['/portfolio']);
     },
     () =>
       {
+        this.loginservice.error = true;
         this.ruta.navigate(['/login']);
       }
     )
