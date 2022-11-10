@@ -24,6 +24,7 @@ import { HnsskillsComponent } from './components/agregar/hnsskills/hnsskills.com
 import { XperienceComponent } from './components/agregar/xperience/xperience.component';
 import { EditarAboutmeComponent } from './components/editar/editar-aboutme/editar-aboutme.component';
 import { BorrarhnsComponent } from './components/borrar/borrarhns/borrarhns.component';
+import { CerrarsesComponent } from './components/cerrarses/cerrarses.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { BorrarhnsComponent } from './components/borrar/borrarhns/borrarhns.comp
     HnsskillsComponent,
     XperienceComponent,
     EditarAboutmeComponent,
-    BorrarhnsComponent
+    BorrarhnsComponent,
+    CerrarsesComponent
   ],
   imports: [
     BrowserModule,
