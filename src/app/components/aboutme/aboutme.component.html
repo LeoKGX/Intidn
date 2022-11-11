@@ -4,14 +4,22 @@
     <div class="btn-edit" (click)="mostrarEditarAboutMe = !mostrarEditarAboutMe">
       <i class="fa fa-pen"></i>
     </div>
-  <div class="card mat-card" *ngIf="mostrarEditarAboutMe">
-    <app-editar-aboutme></app-editar-aboutme>
+    <div class="card mat-card" *ngIf="mostrarEditarAboutMe">
+      <app-editar-aboutme></app-editar-aboutme>
+    </div>
+    <div class="btn-edit" (click)="mostrarAniadirAboutMe = !mostrarAniadirAboutMe">
+      <i class="fa fa-plus"></i>
+    </div>
+    <div class="card mat-card" *ngIf="mostrarAniadirAboutMe">
+      <app-aniadiraboutme></app-aniadiraboutme>
+    </div>
   </div>
-</div>
-  <div>
-    <p id="text-acercade">{{miPort.sobre_mi}}</p>
-  </div>
-  <div>
-    <input id="edit-acercade" type="text" style="display:none">
+  <div *ngFor="let about of miPort">
+    <div>
+      <p id="text-acercade">{{about.sobre_mi}}</p>
+    </div>
+    <div>
+      <input id="edit-acercade" type="text" style="display:none">
+    </div>
   </div>
 </div>

@@ -1,0 +1,34 @@
+<form [formGroup]="formEditar" class="login-form" (ngSubmit)="onSend($event)" >
+  <div class="form-group mb-3">
+    <label for="mail">Email</label>
+    <input
+    class="form-control"
+    formControlName="mail"
+    id="mail"
+    [ngClass]="{'is-invalid': Mail?.errors && Mail?.touched, 'is-valid' : !Mail?.errors && Mail?.touched}"
+    >
+    <div *ngIf="Mail?.errors && Mail?.touched">
+      <p *ngIf="Mail?.hasError('required')" class="text-danger">
+        El email es requerido
+      </p>
+      <p *ngIf="Mail?.hasError('email')" class="text-danger">
+        Ingrese un email valido
+      </p>
+    </div>
+  </div>
+  <div class="form-group mb-3">
+    <label for="about">Nuevo acerca de mi</label>
+    <input
+    class="form-control"
+    id="about"
+    formControlName="about"
+    [ngClass]="{'is-invalid': About?.errors && About?.touched, 'is-valid' : !About?.errors && About?.touched}"
+    >
+    <div *ngIf="About?.errors && About?.touched">
+      <p *ngIf="About?.hasError('required')" class="text-danger">
+        Ingrese informacion acerca de usted
+      </p>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>

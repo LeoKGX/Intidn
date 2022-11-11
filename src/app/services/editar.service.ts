@@ -10,13 +10,15 @@ import { map, Observable } from 'rxjs';
 })
 export class EditarService {
 
-
   urlFotoPerfil = "https://app-portfolio-lkg.herokuapp.com/update/persona/profileimg"
   urlAniadirEdu = "https://app-portfolio-lkg.herokuapp.com/crear/edu"
   urlAniadirCert = "https://app-portfolio-lkg.herokuapp.com/crear/cert"
   urlAniadirHNS = "https://app-portfolio-lkg.herokuapp.com/crear/hns"
   urlAniadirXp = "https://app-portfolio-lkg.herokuapp.com/crear/xp"
+  urlAniadirAboutMe = "https://app-portfolio-lkg.herokuapp.com/crear/aboutme"
   urlEditarAboutme = "https://app-portfolio-lkg.herokuapp.com/update/persona/aboutme"
+  urlEditarInfoContacto = "https://app-portfolio-lkg.herokuapp.com/update/persona/contacto"
+  urlEditarInfoPersonal = "https://app-portfolio-lkg.herokuapp.com/update/persona/personal"
 
   constructor(private http: HttpClient) { }
 
@@ -57,8 +59,25 @@ export class EditarService {
     }));
   }
 
+  aniadirAboutMe(datos: any) : Observable<any>{
+    return this.http.post(this.urlAniadirAboutMe, datos).pipe(map(data=> {
+      return data;
+    }));
+  }
 
+  editarInfoContacto(datos: any) : Observable<any> {
+    console.log("editando info contacto");
+    return this.http.post(this.urlEditarInfoContacto, datos).pipe(map(data=> {
+      return data;
+    }));
+  }
 
+  editarInfoPersonal(datos: any) : Observable<any> {
+    console.log("editando info personal");
+    return this.http.post(this.urlEditarInfoPersonal, datos).pipe(map(data=> {
+      return data;
+    }));
+  }
 
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -12,6 +13,7 @@ export class AboutmeComponent implements OnInit {
 
   miPort:any;
   mostrarEditarAboutMe = false;
+  mostrarAniadirAboutMe = false;
 
   ngOnInit(): void {
     this.datosPorf.obtenerDatosPersona().subscribe(data => {

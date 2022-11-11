@@ -25,6 +25,10 @@ import { XperienceComponent } from './components/agregar/xperience/xperience.com
 import { EditarAboutmeComponent } from './components/editar/editar-aboutme/editar-aboutme.component';
 import { BorrarhnsComponent } from './components/borrar/borrarhns/borrarhns.component';
 import { CerrarsesComponent } from './components/cerrarses/cerrarses.component';
+import { InfocontactoComponent } from './components/infocontacto/infocontacto.component';
+import { EditarInfocontactoComponent } from './components/editar/editar-infocontacto/editar-infocontacto.component';
+import { EditarInfopersonalComponent } from './components/editar/editar-infopersonal/editar-infopersonal.component';
+import { AniadiraboutmeComponent } from './components/agregar/aniadiraboutme/aniadiraboutme.component';
 
 
 @NgModule({
@@ -45,7 +49,11 @@ import { CerrarsesComponent } from './components/cerrarses/cerrarses.component';
     XperienceComponent,
     EditarAboutmeComponent,
     BorrarhnsComponent,
-    CerrarsesComponent
+    CerrarsesComponent,
+    InfocontactoComponent,
+    EditarInfocontactoComponent,
+    EditarInfopersonalComponent,
+    AniadiraboutmeComponent
   ],
   imports: [
     BrowserModule,

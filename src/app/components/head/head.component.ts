@@ -13,7 +13,8 @@ export class HeadComponent implements OnInit {
   miPort:any;
 
   public mostrarDatos = false;
-  public mostrarEditarFotoPerfil = false;
+  protected mostrarEditarFotoPerfil = false;
+  public mostrarEditarInfoPersonal = false;
 
   ngOnInit(): void {
     this.datosPorf.obtenerDatosPersona().subscribe(data => {

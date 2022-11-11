@@ -14,6 +14,9 @@
     <div id="info-data">
       <div>
         <h1>{{miPort.nombre}}</h1>
+        <div class="btn-edit" (click)="mostrarEditarInfoPersonal = !mostrarEditarInfoPersonal">
+          <i class="fa fa-pen"></i>
+        </div>
         <div id="info-company">
           {{miPort.ocupation}}
         </div>
@@ -23,6 +26,9 @@
         </div>
       </div>
     </div>
+    <div class="card mat-card" *ngIf="mostrarEditarInfoPersonal">
+      <app-editar-infopersonal></app-editar-infopersonal>
+    </div>
     <br>
     <div id="info-actions">
       <button type="button" class="btn btn-primary" (click)="mostrarDatos = !mostrarDatos">Información de contacto</button>
@@ -30,6 +36,5 @@
   </div>
 </div>
 <div class="card mat-card" *ngIf="mostrarDatos">
-  <h2>Email: {{miPort.mail}}</h2>
-  <h2>Telefono: {{miPort.phone}}</h2>
+  <app-infocontacto></app-infocontacto>
 </div>

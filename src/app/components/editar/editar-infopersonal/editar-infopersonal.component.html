@@ -1,0 +1,48 @@
+<form [formGroup]="formEditar" class="login-form" (ngSubmit)="onSend($event)" >
+  <div class="form-group mb-3">
+    <label for="mail">Ingrese un mail asociado a la cuenta para actualizar la informacion personal </label>
+    <input
+    class="form-control"
+    id="mail"
+    formControlName="mail"
+    [ngClass]="{'is-invalid': Mail?.errors && Mail?.touched, 'is-valid' : !Mail?.errors && Mail?.touched}"
+    >
+    <div *ngIf="Mail?.errors && Mail?.touched">
+      <p *ngIf="Mail?.hasError('required')" class="text-danger">
+        Ingrese el mail con el que inicio sesion
+      </p>
+    </div>
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="ocupation">Ingrese su nueva ocupacion </label>
+    <input
+    class="form-control"
+    id="ocupation"
+    formControlName="ocupation"
+    [ngClass]="{'is-invalid': Ocupation?.errors && Ocupation?.touched, 'is-valid' : !Ocupation?.errors && Ocupation?.touched}"
+    >
+    <div *ngIf="Ocupation?.errors && Ocupation?.touched">
+      <p *ngIf="Ocupation?.hasError('required')" class="text-danger">
+        Ingrese una ocupacion
+      </p>
+    </div>
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="city">Ingrese su nueva ciudad </label>
+    <input
+    class="form-control"
+    id="city"
+    formControlName="city"
+    [ngClass]="{'is-invalid': City?.errors && City?.touched, 'is-valid' : !City?.errors && City?.touched}"
+    >
+    <div *ngIf="City?.errors && City?.touched">
+      <p *ngIf="City?.hasError('required')" class="text-danger">
+        Ingrese una ciudad
+      </p>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
