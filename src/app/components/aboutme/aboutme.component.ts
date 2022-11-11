@@ -11,13 +11,13 @@ export class AboutmeComponent implements OnInit {
 
   constructor(private datosPorf:DataService) { }
 
-  miPort:any;
-  mostrarEditarAboutMe = false;
+  aboutmeList:any;
   mostrarAniadirAboutMe = false;
+  mostrarBorrarAcerca= false;
 
   ngOnInit(): void {
-    this.datosPorf.obtenerDatosPersona().subscribe(data => {
-      this.miPort = (data[0]);
+    this.datosPorf.obtenerDatosAboutMe().subscribe(data => {
+      this.aboutmeList = data;
     });
 
   }

@@ -1,0 +1,18 @@
+<form [formGroup]="formBorrar" class="login-form" (ngSubmit)="onSend($event)" >
+  <div class="form-group mb-3">
+    <label for="acercaDeMi">Copie y pegue el acerca de mi que quiere borrar </label>
+    <input
+    class="form-control"
+    id="acercaDeMi"
+    formControlName="acercaDeMi"
+    [ngClass]="{'is-invalid': AcercaDeMi?.errors && AcercaDeMi?.touched, 'is-valid' : !AcercaDeMi?.errors && AcercaDeMi?.touched}"
+    >
+    <div *ngIf="AcercaDeMi?.errors && AcercaDeMi?.touched">
+      <p *ngIf="AcercaDeMi?.hasError('required')" class="text-danger">
+        Ingreselo
+      </p>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>

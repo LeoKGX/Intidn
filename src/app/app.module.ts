@@ -29,6 +29,10 @@ import { InfocontactoComponent } from './components/infocontacto/infocontacto.co
 import { EditarInfocontactoComponent } from './components/editar/editar-infocontacto/editar-infocontacto.component';
 import { EditarInfopersonalComponent } from './components/editar/editar-infopersonal/editar-infopersonal.component';
 import { AniadiraboutmeComponent } from './components/agregar/aniadiraboutme/aniadiraboutme.component';
+import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { ProyectoComponent } from './components/agregar/proyecto/proyecto.component';
+import { BorrarproyeComponent } from './components/borrar/borrarproye/borrarproye.component';
+import { BorraracercademiComponent } from './components/borrar/borraracercademi/borraracercademi.component';
 
 
 @NgModule({
@@ -53,7 +57,11 @@ import { AniadiraboutmeComponent } from './components/agregar/aniadiraboutme/ani
     InfocontactoComponent,
     EditarInfocontactoComponent,
     EditarInfopersonalComponent,
-    AniadiraboutmeComponent
+    AniadiraboutmeComponent,
+    ProyectosComponent,
+    ProyectoComponent,
+    BorrarproyeComponent,
+    BorraracercademiComponent
   ],
   imports: [
     BrowserModule,

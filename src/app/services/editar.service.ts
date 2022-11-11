@@ -15,6 +15,7 @@ export class EditarService {
   urlAniadirCert = "https://app-portfolio-lkg.herokuapp.com/crear/cert"
   urlAniadirHNS = "https://app-portfolio-lkg.herokuapp.com/crear/hns"
   urlAniadirXp = "https://app-portfolio-lkg.herokuapp.com/crear/xp"
+  urlAniadirProyecto = "https://app-portfolio-lkg.herokuapp.com/crear/proyecto"
   urlAniadirAboutMe = "https://app-portfolio-lkg.herokuapp.com/crear/aboutme"
   urlEditarAboutme = "https://app-portfolio-lkg.herokuapp.com/update/persona/aboutme"
   urlEditarInfoContacto = "https://app-portfolio-lkg.herokuapp.com/update/persona/contacto"
@@ -65,16 +66,22 @@ export class EditarService {
     }));
   }
 
+  aniadirProyecto(datos: any) : Observable<any>{
+    return this.http.post(this.urlAniadirProyecto, datos).pipe(map(data=> {
+      return data;
+    }));
+  }
+
   editarInfoContacto(datos: any) : Observable<any> {
     console.log("editando info contacto");
-    return this.http.post(this.urlEditarInfoContacto, datos).pipe(map(data=> {
+    return this.http.put(this.urlEditarInfoContacto, datos).pipe(map(data=> {
       return data;
     }));
   }
 
   editarInfoPersonal(datos: any) : Observable<any> {
     console.log("editando info personal");
-    return this.http.post(this.urlEditarInfoPersonal, datos).pipe(map(data=> {
+    return this.http.put(this.urlEditarInfoPersonal, datos).pipe(map(data=> {
       return data;
     }));
   }

@@ -12,6 +12,8 @@ export class DataService {
   urleducacion:string = "https://app-portfolio-lkg.herokuapp.com/educacion";
   urlskills:string = "https://app-portfolio-lkg.herokuapp.com/skill";
   urlproyectos:string = "https://app-portfolio-lkg.herokuapp.com/proyectos";
+  urlexperiencia: string = "https://app-portfolio-lkg.herokuapp.com/xp";
+  urlaboutme: string = "https://app-portfolio-lkg.herokuapp.com/aboutme";
 
 
   constructor(private http:HttpClient) { }
@@ -36,5 +38,11 @@ export class DataService {
     return this.http.get(this.urlproyectos);
   }
 
+  obtenerDatosExperiencia():Observable<any>{
+    return this.http.get(this.urlexperiencia);
+  }
 
+  obtenerDatosAboutMe():Observable<any>{
+    return this.http.get(this.urlaboutme);
+  }
 }

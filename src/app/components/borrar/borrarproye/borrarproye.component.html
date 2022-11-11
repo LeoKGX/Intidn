@@ -1,0 +1,18 @@
+<form [formGroup]="formBorrar" class="login-form" (ngSubmit)="onSend($event)" >
+  <div class="form-group mb-3">
+    <label for="Nombre">Ingrese el nombre del proyecto a eliminar</label>
+    <input
+    class="form-control"
+    id="nombre"
+    formControlName="nombre"
+    [ngClass]="{'is-invalid': Nombre?.errors && Nombre?.touched, 'is-valid' : !Nombre?.errors && Nombre?.touched}"
+    >
+    <div *ngIf="Nombre?.errors && Nombre?.touched">
+      <p *ngIf="Nombre?.hasError('required')" class="text-danger">
+        Ingrese el proyecto a eliminar
+      </p>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>

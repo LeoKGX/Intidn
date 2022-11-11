@@ -1,22 +1,29 @@
 <div class="card mat-card">
   <div class="card-titles">
     <h2>Acerca de mi</h2>
-    <div class="btn-edit" (click)="mostrarEditarAboutMe = !mostrarEditarAboutMe">
+    <!-- <div class="btn-edit" (click)="mostrarEditarAboutMe = !mostrarEditarAboutMe">
       <i class="fa fa-pen"></i>
     </div>
     <div class="card mat-card" *ngIf="mostrarEditarAboutMe">
       <app-editar-aboutme></app-editar-aboutme>
     </div>
+  -->
     <div class="btn-edit" (click)="mostrarAniadirAboutMe = !mostrarAniadirAboutMe">
       <i class="fa fa-plus"></i>
     </div>
     <div class="card mat-card" *ngIf="mostrarAniadirAboutMe">
       <app-aniadiraboutme></app-aniadiraboutme>
     </div>
+    <div class="btn-edit" (click)="mostrarBorrarAcerca = !mostrarBorrarAcerca">
+      <i class="fa fa-trash"></i>
+    </div>
+    <div class="card mat-card" *ngIf="mostrarBorrarAcerca">
+      <app-borraracercademi></app-borraracercademi>
+    </div>
   </div>
-  <div *ngFor="let about of miPort">
+  <div *ngFor="let about of aboutmeList">
     <div>
-      <p id="text-acercade">{{about.sobre_mi}}</p>
+      <p id="text-acercade">{{about.aboutme}}</p>
     </div>
     <div>
       <input id="edit-acercade" type="text" style="display:none">

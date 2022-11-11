@@ -17,9 +17,10 @@ export class XperienceComponent implements OnInit {
     ) {
     this.formEditar = this.formbuilder.group(
           {
-            name:['',[Validators.required]],
-            description:['',[Validators.required]],
-            techs:this.techList
+            nombreEmpresa:['',[Validators.required]],
+            puesto:['',[Validators.required]],
+            fechaInicio:['',[Validators.required]],
+            fechaFin:['',[Validators.required]]
           }
         )
         }
@@ -27,27 +28,28 @@ export class XperienceComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  techList:any;
-
-  get Name(){
-    return this.formEditar.get( 'name' );
+  get NombreEmpresa(){
+    return this.formEditar.get( 'nombreEmpresa' );
   }
 
-  get Description(){
-    return this.formEditar.get( 'description' );
+  get Puesto(){
+    return this.formEditar.get( 'puesto' );
   }
 
-  get Tech(){
-    this.techList(this.Tech)
-    return this.formEditar.get( 'tech' );
+  get FechaInicio(){
+    return this.formEditar.get( 'fechaInicio' );
   }
+
+  get FechaFin(){
+    return this.formEditar.get( 'fechaFin' );
+  }
+
 
   onSend(event : Event){
     event.preventDefault;
-    console.log(this.formEditar.value)
     this.editarService.aniadirXp(this.formEditar.value ).subscribe(()=> {
       window.location.reload();
     });
   }
-
 }
+

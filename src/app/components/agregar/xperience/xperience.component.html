@@ -1,44 +1,59 @@
 <form [formGroup]="formEditar" class="login-form" (ngSubmit)="onSend($event)" >
   <div class="form-group mb-3">
-    <label for="name">Ingrese el nombre del proyecto </label>
+    <label for="nombreEmpresa">Nombre de la empresa </label>
     <input
     class="form-control"
-    id="name"
-    formControlName="name"
-    [ngClass]="{'is-invalid': Name?.errors && Name?.touched, 'is-valid' : !Name?.errors && Name?.touched}"
+    formControlName="nombreEmpresa"
+    id="nombreEmpresa"
+    [ngClass]="{'is-invalid': NombreEmpresa?.errors && NombreEmpresa?.touched, 'is-valid' : !NombreEmpresa?.errors && NombreEmpresa?.touched}"
     >
-    <div *ngIf="Name?.errors && Name?.touched">
-      <p *ngIf="Name?.hasError('required')" class="text-danger">
-        Ingrese el nombre
+    <div *ngIf="NombreEmpresa?.errors && NombreEmpresa?.touched">
+      <p *ngIf="NombreEmpresa?.hasError('required')" class="text-danger">
+        El Nombre de la empresa es requerido
       </p>
     </div>
   </div>
 
   <div class="form-group mb-3">
-    <label for="description">Ingrese una breve descripcion del proyecto </label>
+    <label for="puesto">Ingrese el puesto que cumplia en la empresa</label>
     <input
     class="form-control"
-    id="description"
-    formControlName="description"
-    [ngClass]="{'is-invalid': Description?.errors && Description?.touched, 'is-valid' : !Description?.errors && Description?.touched}"
+    id="puesto"
+    formControlName="puesto"
+    [ngClass]="{'is-invalid': Puesto?.errors && Puesto?.touched, 'is-valid' : !Puesto?.errors && Puesto?.touched}"
     >
-    <div *ngIf="Description?.errors && Description?.touched">
-      <p *ngIf="Description?.hasError('required')" class="text-danger">
-        Ingrese una descripcion
+    <div *ngIf="Puesto?.errors && Puesto?.touched">
+      <p *ngIf="Puesto?.hasError('required')" class="text-danger">
+        Ingrese el puesto
+      </p>
+    </div>
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="fechaInicio">Ingrese el año en el que ingreso al trabajo </label>
+    <input
+    class="form-control"
+    id="fechaInicio"
+    formControlName="fechaInicio"
+    [ngClass]="{'is-invalid': FechaInicio?.errors && FechaInicio?.touched, 'is-valid' : !FechaInicio?.errors && FechaInicio?.touched}"
+    >
+    <div *ngIf="FechaInicio?.errors && FechaInicio?.touched">
+      <p *ngIf="FechaInicio?.hasError('required')" class="text-danger">
+        Ingrese un año
       </p>
     </div>
   </div>
   <div class="form-group mb-3">
-    <label for="tech">Ingrese las tecnologias del proyecto </label>
+    <label for="fechaFin">Ingrese el año el que dejo de trabajar en ese lugar </label>
     <input
     class="form-control"
-    id="tech"
-    formControlName="tech"
-    [ngClass]="{'is-invalid': Tech?.errors && Tech?.touched, 'is-valid' : !Tech?.errors && Tech?.touched}"
+    id="fechaFin"
+    formControlName="fechaFin"
+    [ngClass]="{'is-invalid': FechaFin?.errors && FechaFin?.touched, 'is-valid' : !FechaFin?.errors && FechaFin?.touched}"
     >
-    <div *ngIf="Tech?.errors && Tech?.touched">
-      <p *ngIf="Tech?.hasError('required')" class="text-danger">
-        Ingrese una tecnologia
+    <div *ngIf="FechaFin?.errors && FechaFin?.touched">
+      <p *ngIf="FechaFin?.hasError('required')" class="text-danger">
+        Ingrese el año de fin
       </p>
     </div>
   </div>

@@ -10,12 +10,12 @@ export class XpComponent implements OnInit {
 
   constructor(private datosPorf:DataService) { }
 
-  //mostrarAniadirXp = false;
-  proyectosList:any ;
+  mostrarAniadirXp = false;
+  xpList:any ;
 
   ngOnInit(): void {
-    this.datosPorf.obtenerDatosProyectos().subscribe(data => {
-      this.proyectosList = data;
+    this.datosPorf.obtenerDatosExperiencia().subscribe(data => {
+      this.xpList = data;
     });
   }
 

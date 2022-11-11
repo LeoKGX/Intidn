@@ -35,7 +35,6 @@ export class AniadiraboutmeComponent implements OnInit {
 
   onSend(event : Event){
     event.preventDefault;
-    console.log("añadiendo")
     this.editarService.aniadirAboutMe(this.formEditar.value ).subscribe(()=> {
       window.location.reload();
     });
