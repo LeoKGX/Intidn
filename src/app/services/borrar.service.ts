@@ -10,6 +10,7 @@ export class BorrarService {
   urlBorrarHNS = "https://app-portfolio-lkg.herokuapp.com/borrar/hns"
   urlBorrarProyecto = "https://app-portfolio-lkg.herokuapp.com/borrar/proyecto"
   urlBorrarAcercaDeMi=  "https://app-portfolio-lkg.herokuapp.com/borrar/acercademi"
+  urlBorrarXP=  "https://app-portfolio-lkg.herokuapp.com/borrar/xp"
 
   constructor(private http: HttpClient) { }
 
@@ -33,4 +34,9 @@ export class BorrarService {
     }));
   }
 
+  borrarXP(datos: any) : Observable<any> {
+    return this.http.put(this.urlBorrarXP, datos).pipe(map(data=> {
+      return data;
+    }));
+  }
 }

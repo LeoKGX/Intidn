@@ -17,9 +17,9 @@ export class EditarInfocontactoComponent implements OnInit {
     ) {
     this.formEditar = this.formbuilder.group(
           {
-            mailactual:['',[Validators.required]],
+            mail:['',[Validators.required]],
             mailnuevo:['',[Validators.required]],
-            telefononuevo:['',[Validators.required]]
+            NuevoTelefono:['',[Validators.required]]
           }
         )
         }
@@ -27,16 +27,16 @@ export class EditarInfocontactoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  get MailActual(){
-    return this.formEditar.get( 'mailactual' );
+  get Mail(){
+    return this.formEditar.get( 'mail' );
   }
 
   get MailNuevo(){
     return this.formEditar.get( 'mailnuevo' );
   }
 
-  get TelefonoNuevo(){
-    return this.formEditar.get( 'telefononuevo' );
+  get NuevoTelefono(){
+    return this.formEditar.get( 'nuevotelefono' );
   }
 
   onSend(event : Event){

@@ -11,6 +11,7 @@ export class XpComponent implements OnInit {
   constructor(private datosPorf:DataService) { }
 
   mostrarAniadirXp = false;
+  mostrarBorrarXp = false;
   xpList:any ;
 
   ngOnInit(): void {

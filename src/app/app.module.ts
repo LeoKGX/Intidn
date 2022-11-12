@@ -33,6 +33,7 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { ProyectoComponent } from './components/agregar/proyecto/proyecto.component';
 import { BorrarproyeComponent } from './components/borrar/borrarproye/borrarproye.component';
 import { BorraracercademiComponent } from './components/borrar/borraracercademi/borraracercademi.component';
+import { BorrarxpComponent } from './components/borrar/borrarxp/borrarxp.component';
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import { BorraracercademiComponent } from './components/borrar/borraracercademi/
     ProyectosComponent,
     ProyectoComponent,
     BorrarproyeComponent,
-    BorraracercademiComponent
+    BorraracercademiComponent,
+    BorrarxpComponent
   ],
   imports: [
     BrowserModule,

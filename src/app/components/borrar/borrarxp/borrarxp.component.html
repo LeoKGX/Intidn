@@ -1,0 +1,18 @@
+<form [formGroup]="formBorrar" class="login-form" (ngSubmit)="onSend($event)" >
+  <div class="form-group mb-3">
+    <label for="nombreEmpresa">Ingrese el nombre de la experiencia a eliminar</label>
+    <input
+    class="form-control"
+    id="nombreEmpresa"
+    formControlName="nombreEmpresa"
+    [ngClass]="{'is-invalid': NombreEmpresa?.errors && NombreEmpresa?.touched, 'is-valid' : !NombreEmpresa?.errors && NombreEmpresa?.touched}"
+    >
+    <div *ngIf="NombreEmpresa?.errors && NombreEmpresa?.touched">
+      <p *ngIf="NombreEmpresa?.hasError('required')" class="text-danger">
+        Ingrese la experiencia a eliminar
+      </p>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
