@@ -17,7 +17,7 @@ export class BorraracercademiComponent implements OnInit {
     ) {
     this.formBorrar = this.formbuilder.group(
           {
-            acercaDeMi:['',[Validators.required]]
+            about:['',[Validators.required]]
           }
         )
         }
@@ -25,8 +25,8 @@ export class BorraracercademiComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  get AcercaDeMi(){
-    return this.formBorrar.get( 'acercaDeMi' );
+  get About(){
+    return this.formBorrar.get( 'about' );
   }
 
 

@@ -19,15 +19,13 @@ export class ProyectoComponent implements OnInit {
           {
             name:['',[Validators.required]],
             description:['',[Validators.required]],
-            techs:this.techList
+            tech:['',[Validators.required]],
           }
         )
         }
 
   ngOnInit(): void {
   }
-
-  techList:any;
 
   get Name(){
     return this.formEditar.get( 'name' );
@@ -38,14 +36,13 @@ export class ProyectoComponent implements OnInit {
   }
 
   get Tech(){
-    this.techList(this.Tech)
     return this.formEditar.get( 'tech' );
   }
 
   onSend(event : Event){
     event.preventDefault;
     console.log(this.formEditar.value)
-    this.editarService.aniadirXp(this.formEditar.value ).subscribe(()=> {
+    this.editarService.aniadirProyecto(this.formEditar.value ).subscribe(()=> {
       window.location.reload();
     });
   }

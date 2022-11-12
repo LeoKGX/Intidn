@@ -61,13 +61,13 @@ export class EditarService {
   }
 
   aniadirAboutMe(datos: any) : Observable<any>{
-    return this.http.post(this.urlAniadirAboutMe, datos).pipe(map(data=> {
+    return this.http.put(this.urlAniadirAboutMe, datos).pipe(map(data=> {
       return data;
     }));
   }
 
   aniadirProyecto(datos: any) : Observable<any>{
-    return this.http.post(this.urlAniadirProyecto, datos).pipe(map(data=> {
+    return this.http.put(this.urlAniadirProyecto, datos).pipe(map(data=> {
       return data;
     }));
   }

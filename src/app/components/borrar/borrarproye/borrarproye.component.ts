@@ -17,7 +17,7 @@ export class BorrarproyeComponent implements OnInit {
     ) {
     this.formBorrar = this.formbuilder.group(
           {
-            nombre:['',[Validators.required]]
+            name:['',[Validators.required]]
           }
         )
         }
@@ -25,8 +25,8 @@ export class BorrarproyeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  get Nombre(){
-    return this.formBorrar.get( 'nombre' );
+  get Name(){
+    return this.formBorrar.get( 'name' );
   }
 
 
