@@ -19,7 +19,7 @@ export class EditarInfocontactoComponent implements OnInit {
           {
             mail:['',[Validators.required]],
             nuevomail:['',[Validators.required]],
-            NuevoTelefono:['',[Validators.required]]
+            nuevotelefono:['',[Validators.required]]
           }
         )
         }

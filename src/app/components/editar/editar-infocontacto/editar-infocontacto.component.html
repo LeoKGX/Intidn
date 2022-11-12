@@ -4,6 +4,7 @@
     <input
     class="form-control"
     id="mail"
+    formControlName="mail"
     [ngClass]="{'is-invalid': Mail?.errors && Mail?.touched, 'is-valid' : !Mail?.errors && Mail?.touched}"
     >
     <div *ngIf="Mail?.errors && Mail?.touched">
@@ -29,11 +30,11 @@
   </div>
 
   <div class="form-group mb-3">
-    <label for="nuevoTelefono">Ingrese el nuevo numero de telefono </label>
+    <label for="nuevotelefono">Ingrese el nuevo numero de telefono </label>
     <input
     class="form-control"
-    id="nuevoTelefono"
-    formControlName="nuevoTelefono"
+    id="nuevotelefono"
+    formControlName="nuevotelefono"
     [ngClass]="{'is-invalid': NuevoTelefono?.errors && NuevoTelefono?.touched, 'is-valid' : !NuevoTelefono?.errors && NuevoTelefono?.touched}"
     >
     <div *ngIf="NuevoTelefono?.errors && NuevoTelefono?.touched">
