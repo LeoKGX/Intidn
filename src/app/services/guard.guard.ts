@@ -6,12 +6,12 @@ import { UsersService } from './login.service';
 @Injectable({
   providedIn: 'root'
 })
-export class GuardGuard implements CanActivate {
+export class GuardGuard{ //implements CanActivate {
 
   constructor(private loginservice: UsersService, private ruta: Router){
 
   }
-
+/*
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
@@ -23,5 +23,5 @@ export class GuardGuard implements CanActivate {
         return false;
       }
   }
-
+*/
 }

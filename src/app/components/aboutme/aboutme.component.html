@@ -8,17 +8,19 @@
       <app-editar-aboutme></app-editar-aboutme>
     </div>
   -->
-    <div class="btn-edit" (click)="mostrarAniadirAboutMe = !mostrarAniadirAboutMe">
-      <i class="fa fa-plus"></i>
-    </div>
-    <div class="card mat-card" *ngIf="mostrarAniadirAboutMe">
-      <app-aniadiraboutme></app-aniadiraboutme>
-    </div>
-    <div class="btn-edit" (click)="mostrarBorrarAcerca = !mostrarBorrarAcerca">
-      <i class="fa fa-trash"></i>
-    </div>
-    <div class="card mat-card" *ngIf="mostrarBorrarAcerca">
-      <app-borraracercademi></app-borraracercademi>
+    <div *ngIf="userloged">
+      <div class="btn-edit" (click)="mostrarAniadirAboutMe = !mostrarAniadirAboutMe">
+        <i class="fa fa-plus"></i>
+      </div>
+      <div class="card mat-card" *ngIf="mostrarAniadirAboutMe">
+        <app-aniadiraboutme></app-aniadiraboutme>
+      </div>
+      <div class="btn-edit" (click)="mostrarBorrarAcerca = !mostrarBorrarAcerca">
+        <i class="fa fa-trash"></i>
+      </div>
+      <div class="card mat-card" *ngIf="mostrarBorrarAcerca">
+        <app-borraracercademi></app-borraracercademi>
+      </div>
     </div>
   </div>
   <div *ngFor="let about of aboutmeList">

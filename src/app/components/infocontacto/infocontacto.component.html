@@ -1,10 +1,12 @@
 <div class="card mat-card">
   <div class="card-titles">
-    <div class="btn-edit" (click)="mostrarEditarInfoContacto = !mostrarEditarInfoContacto">
-      <i class="fa fa-pen"></i>
+    <div *ngIf="userloged">
+      <div class="btn-edit" (click)="mostrarEditarInfoContacto = !mostrarEditarInfoContacto">
+        <i class="fa fa-pen"></i>
+      </div>
+    <div class="card mat-card" *ngIf="mostrarEditarInfoContacto">
+      <app-editar-infocontacto></app-editar-infocontacto>
     </div>
-  <div class="card mat-card" *ngIf="mostrarEditarInfoContacto">
-    <app-editar-infocontacto></app-editar-infocontacto>
   </div>
 </div>
   <div>

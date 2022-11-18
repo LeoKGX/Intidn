@@ -1,8 +1,17 @@
-<div class="container">
+<div *ngIf="userloged" class="container">
   <div class="btn-cerrarsesion">
-    <button type="button" id="btn-cerrarsesion" (click)="onClic()"></button>
+    <button type="button" id="btn-cerrarsesion" (click)="onClicCerrar()"></button>
     <label for="btn-cerrarsesion">
       Cerrar Sesion
+    </label>
+  </div>
+</div>
+
+<div *ngIf="!userloged" class="container">
+  <div class="btn-cerrarsesion">
+    <button type="button" id="btn-cerrarsesion" (click)="onClicIniciar()"></button>
+    <label for="btn-cerrarsesion">
+      Iniciar Sesion
     </label>
   </div>
 </div>

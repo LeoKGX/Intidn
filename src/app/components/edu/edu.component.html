@@ -2,11 +2,13 @@
   <div id="educacion">
     <div class="card-titles">
       <h2>Educación</h2>
-      <div class="btn-edit" (click)="mostrarAniadirEdu = !mostrarAniadirEdu">
-        <i class="fa fa-plus"></i>
-      </div>
-      <div class="card mat-card" *ngIf="mostrarAniadirEdu">
-        <app-education></app-education>
+      <div *ngIf="userloged">
+        <div class="btn-edit" (click)="mostrarAniadirEdu = !mostrarAniadirEdu">
+          <i class="fa fa-plus"></i>
+        </div>
+        <div class="card mat-card" *ngIf="mostrarAniadirEdu">
+          <app-education></app-education>
+        </div>
       </div>
     </div>
   </div>

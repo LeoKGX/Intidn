@@ -12,6 +12,7 @@ import { UsersService } from 'src/app/services/login.service';
 export class LoginComponent implements OnInit {
   form: FormGroup;
   error: boolean = this.loginservice.error ;
+
   constructor(private formbuilder: FormBuilder, private loginservice: UsersService, private ruta: Router) {
     this.form = this.formbuilder.group(
       {
@@ -52,4 +53,3 @@ export class LoginComponent implements OnInit {
     )
   }
 }
-

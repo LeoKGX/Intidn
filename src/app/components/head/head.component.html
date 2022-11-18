@@ -4,18 +4,24 @@
   <div id="info" style="padding: 16px;">
     <div id="info-img">
       <img class="profile-image" [src]="miPort.profile_img" alt="Profile picture">
+      <div *ngIf="userloged">
         <div class="btn-edit" (click)="mostrarEditarFotoPerfil = !mostrarEditarFotoPerfil">
           <i class="fa fa-pen"></i>
         </div>
+      </div>
     </div>
-    <div class="card mat-card" *ngIf="mostrarEditarFotoPerfil">
-      <app-editar-foto-perfil></app-editar-foto-perfil>
+    <div *ngIf="userloged">
+      <div class="card mat-card" *ngIf="mostrarEditarFotoPerfil">
+        <app-editar-foto-perfil></app-editar-foto-perfil>
+      </div>
     </div>
     <div id="info-data">
       <div>
         <h1>{{miPort.nombre}}</h1>
-        <div class="btn-edit" (click)="mostrarEditarInfoPersonal = !mostrarEditarInfoPersonal">
-          <i class="fa fa-pen"></i>
+        <div *ngIf="userloged">
+          <div class="btn-edit" (click)="mostrarEditarInfoPersonal = !mostrarEditarInfoPersonal">
+            <i class="fa fa-pen"></i>
+          </div>
         </div>
         <div id="info-company">
           {{miPort.ocupation}}

@@ -15,7 +15,7 @@ export class UsersService {
   constructor(private http: HttpClient, private ruta: Router) {
     console.log("el auth serv esta corriendo");
     this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser') || '{}'));
-    if ( this.usuarioAutenticado){this.ruta.navigate(['/portfolio']);}
+    //if ( this.usuarioAutenticado){this.ruta.navigate(['/portfolio']);}
   }
 
   iniciarSesion(credenciales : any): Observable<any>
@@ -38,4 +38,7 @@ export class UsersService {
     sessionStorage.removeItem('currentUser');
   }
 
+  userlogedin() : boolean{
+      return (this.usuarioAutenticado && this.usuarioAutenticado.accessToken)
+  }
 }

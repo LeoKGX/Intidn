@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DataService } from 'src/app/services/data.service';
-import { EditarService } from 'src/app/services/editar.service';
+import { UsersService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-head',
@@ -15,6 +15,7 @@ export class HeadComponent implements OnInit {
   public mostrarDatos = false;
   protected mostrarEditarFotoPerfil = false;
   public mostrarEditarInfoPersonal = false;
+  protected userloged : boolean = this.loginService.userlogedin();
 
   ngOnInit(): void {
     this.datosPorf.obtenerDatosPersona().subscribe(data => {
@@ -24,9 +25,10 @@ export class HeadComponent implements OnInit {
   }
 
   constructor(private datosPorf:DataService,
-              private formbuilder: FormBuilder,
+              private loginService: UsersService
+             ) {
 
-             ) {  }
+             }
 
 
 }
